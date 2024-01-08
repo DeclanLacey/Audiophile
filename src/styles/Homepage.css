@@ -8,17 +8,19 @@
     position: relative;
     text-align: center;
     color: white;
+    margin-bottom: 100px;
 }
 
 .homepage_main-img {
-   
+    object-fit: cover;
+   height: 600px;
 }
 
 .homepage_main-img-text-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -37%);
   width: 80%;
 }
 
@@ -58,7 +60,7 @@
     letter-spacing: 1px;
     border: none;
     cursor: pointer;
-    transition: transform 500ms;
+    transition: transform 600ms;
     margin-top: 15px;
 }
 
