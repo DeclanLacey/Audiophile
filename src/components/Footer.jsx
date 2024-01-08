@@ -5,13 +5,13 @@ function Footer() {
     return (
         <footer className="footer">
 
-            <img src="/assets/shared/desktop/logo.svg" />
+            <img className="footer_logo" src="/assets/shared/desktop/logo.svg" />
 
             <div className="footer_nav-container">
-                <Link> <button className="footer_nav-link"> home </button></Link>
-                <Link> <button className="footer_nav-link"> headphones </button></Link>
-                <Link> <button className="footer_nav-link"> speakers </button></Link>
-                <Link> <button className="footer_nav-link"> earphones </button></Link>
+                <Link to=""> <button className="footer_nav-link"> home </button></Link>
+                <Link to=""> <button className="footer_nav-link"> headphones </button></Link>
+                <Link to=""> <button className="footer_nav-link"> speakers </button></Link>
+                <Link to=""> <button className="footer_nav-link"> earphones </button></Link>
             </div>
 
             <div>
@@ -19,15 +19,15 @@ function Footer() {
             </div>
 
             <div className="footer_bottom-container">
-                <p> Copyright 2021. All Rights Reserved </p>
-                <div>
-                    <a>
+                <p className="footer_copyright-text"> Copyright 2021. All Rights Reserved </p>
+                <div className="footer_social-container">
+                    <a href="#">
                         <img className="footer_social-img" src="assets/shared/desktop/icon-facebook.svg" />
                     </a>
-                    <a>
+                    <a href="#">
                         <img className="footer_social-img" src="assets/shared/desktop/icon-twitter.svg"/>
                     </a>
-                    <a>
+                    <a href="#">
                         <img className="footer_social-img" src="assets/shared/desktop/icon-instagram.svg"/>
                     </a>
                 </div>
