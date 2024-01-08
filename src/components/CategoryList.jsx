@@ -9,7 +9,7 @@ function CategoryList() {
                 <h2 className="categoryList_name"> headphones</h2>
                 <div className="categoryList_link-container">
                     <Link className="categoryList_link">shop </Link>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+                    <svg className="categoryList_svg" xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
                         <path d="M1.32178 1L6.32178 6L1.32178 11" stroke="#D87D4A" stroke-width="2"/>
                     </svg>
                 </div>
@@ -20,7 +20,7 @@ function CategoryList() {
                 <h2 className="categoryList_name"> speakers</h2>
                 <div className="categoryList_link-container">
                     <Link className="categoryList_link">shop </Link>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+                    <svg className="categoryList_svg" xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
                         <path d="M1.32178 1L6.32178 6L1.32178 11" stroke="#D87D4A" stroke-width="2"/>
                     </svg>
                 </div>
@@ -31,7 +31,7 @@ function CategoryList() {
                 <h2 className="categoryList_name">earphones</h2>
                 <div className="categoryList_link-container">
                     <Link className="categoryList_link">shop </Link>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+                    <svg className="categoryList_svg" xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
                         <path d="M1.32178 1L6.32178 6L1.32178 11" stroke="#D87D4A" stroke-width="2"/>
                     </svg>
                 </div>

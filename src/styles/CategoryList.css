@@ -52,6 +52,10 @@
     gap: 10px;
 }
 
+.categoryList_svg {
+    margin-left: -20px;
+}
+
 .categoryList_link {
     text-decoration: none;
     opacity: 0.5;
@@ -62,7 +66,5 @@
     line-height: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
-    width: 20px;
-    padding-right: 50px;
-    margin-right: -28px;
+    width: 60px;
 }

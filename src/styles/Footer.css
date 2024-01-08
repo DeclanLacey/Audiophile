@@ -1,0 +1,9 @@
+
+.footer {
+    height: fit-content;
+    padding: 20px;
+    background-color: #101010;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

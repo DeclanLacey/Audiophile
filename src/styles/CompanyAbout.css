@@ -1,0 +1,33 @@
+.companyAbout_container{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.companyAbout_img {
+    border-radius: 8px;
+}
+
+.companyAbout_title {
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.companyAbout_title-span {
+    color: #D87D4A;
+}
+
+.companyAbout_desc {
+    font-size: 0.9375rem;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    opacity: 0.5;
+    text-align: center;
+}

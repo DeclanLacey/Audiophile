@@ -1,16 +1,21 @@
 import Header from "./Header"
 import Homepage from "./Homepage"
+import Footer from "./Footer"
 import {Routes, Route} from "react-router-dom"
 import "../styles/App.css"
 
 function App() {
   return (
-      <main>
-        <Header />
+      <main className="page-container">
+        <div className="content-wrap">
+          <Header />
 
-        <Routes>
+          <Routes>
             <Route path="/" element={<Homepage />} />
-        </Routes>
+          </Routes>
+        </div> 
+
+        <Footer />
       </main>
   )
 }

@@ -1,6 +1,5 @@
-.homepage_container {
-    
-}
+
+/* /////// Homepage top section styling //////////// */
 
 .homepage_main-img-container {
     height: 600px;
@@ -67,3 +66,5 @@
 .homepage_main-img-btn:hover {
     transform: scale(1.07);
 }
+
+
