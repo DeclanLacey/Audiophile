@@ -13,6 +13,7 @@
     line-height: 1.5625rem;
     opacity: 0.5;
     font-size: 0.9375rem;
+    cursor: pointer;
 }
 
 .productDetail_product-img {
@@ -63,21 +64,6 @@
     margin-bottom: 100px;
 }
 
-.productDetail_add-cart-btn {
-    width: 160px;
-    height: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background-color: #D87D4A;
-    font-size: 0.8125rem;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
 /* //////////// Product count selector styling ///////////////// */
 
 .productDetail_plus-minus-container {
@@ -107,4 +93,95 @@
     text-transform: uppercase;
     font-size: 0.8125rem;
 
+}
+
+/* /////////////////// features styling /////////////// */
+
+.productDetail_features-container {
+    margin-bottom: 80px;
+}
+
+.productDetail_features-title {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.857px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.productDetail_features-text {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    opacity: 0.5;
+    font-size: 0.9375rem;
+}
+
+/* ////////////// in the box styling //////////////// */
+
+.productDetail_in-box-outer-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.productDetail_in-box-inner-container {
+    display: flex;
+    gap: 15px;
+    height: 35px;
+}
+
+.productDetail_in-box-title {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.857px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.productDetail_in-box-quantity {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    color: #D87D4A;
+    font-size: 0.9375rem;
+}
+
+.productDetail_in-box-item {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    opacity: 0.5;
+    font-size: 0.9375rem;
+}
+
+/* //////////// extra images styling /////////////// */
+
+.productDetail_extra-img-container {
+    margin-bottom: 110px;
+}
+
+.productDetail_extra-img {
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* ///////////// mini card container styling //////////////// */
+
+.productDetail_mini-card-container {
+    margin-bottom: 170px;
+    text-align: center;
+}
+
+.productDetail_mini-card-title {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.25rem; /* 150% */
+    letter-spacing: 0.05356rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
 }

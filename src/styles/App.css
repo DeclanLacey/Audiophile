@@ -7,3 +7,19 @@ min-height: 100vh;
     padding-bottom: 650px;
 }
 
+/* //////////// re used styles ///////////// */
+
+.shared-btn-style-orange {
+    width: 160px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #D87D4A;
+    font-size: 0.8125rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
