@@ -1,5 +1,6 @@
 import {Link, useLocation, useNavigate} from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
+import {ShoppingCartContext} from "./App.jsx"
 import CategoryList from "./CategoryList"
 import CompanyAbout from "./CompanyAbout"
 import ProductCardMini from "./ProductCardMini"
@@ -8,8 +9,7 @@ import "../styles/ProductDetail.css"
 function ProductDetail() {
 
     const [productCount, setProductCount] = useState(1)
-    let inTheBoxElements = []
-    let miniProductCardElements = []
+    const {shoppingCart, setShoppingCart} = useContext(ShoppingCartContext)
 
     const location = useLocation()
     const data = location.state
@@ -39,21 +39,80 @@ function ProductDetail() {
         }
     }
 
-    for(let i = 0; i < data.includes.length; i++) {
-        inTheBoxElements.push(
-            <div key={i} className="productDetail_in-box-inner-container">
-                <p className="productDetail_in-box-quantity">{data.includes[i].quantity}x</p>
-                <p className="productDetail_in-box-item">{data.includes[i].item}</p>
-            </div>
-        )
+    function handleAddToCart() {
+        
+        if (checkForItemInCart().itemFound) {
+
+            let newCount = productCount + checkForItemInCart().previousCount
+
+            setShoppingCart(prevState => prevState.filter((_, i) => i === checkForItemInCart.itemIndex))
+            setShoppingCart(prevState => {
+                return (
+                    [
+                        ...prevState,
+                        {
+                            "name": data.name,
+                            "price": data.price,
+                            "picture": data.image.mobile,
+                            "count": newCount
+                        }
+                    ]
+                )
+            })
+
+        }else {
+            setShoppingCart(prevState => {
+                return (
+                 [
+                     ...prevState,
+                     {
+                         "name": data.name,
+                         "price": data.price,
+                         "picture": data.image.mobile,
+                         "count": productCount
+                     }
+                 ]
+                ) 
+            })
+        }
     }
 
-    for(let i = 0; i < data.others.length; i++) {
-        miniProductCardElements.push(
-            <ProductCardMini key={i} data={data.others[i]} />
-        )
+    function checkForItemInCart() {
+        let itemFound = false
+        let itemIndex
+        let previousCount
+        for(let i = 0; i < shoppingCart.length; i++) {
+            if (shoppingCart[i].name === data.name) {
+                itemIndex = i
+                itemFound = true
+                previousCount = shoppingCart[i].count
+            }
+        }
+        return {itemFound, itemIndex, previousCount}
     }
 
+    function renderInTheBoxElements() {
+        let inTheBoxElements = []
+        for(let i = 0; i < data.includes.length; i++) {
+            inTheBoxElements.push(
+                <div key={i} className="productDetail_in-box-inner-container">
+                    <p className="productDetail_in-box-quantity">{data.includes[i].quantity}x</p>
+                    <p className="productDetail_in-box-item">{data.includes[i].item}</p>
+                </div>
+            )
+        }
+        return inTheBoxElements
+    }
+    
+    function renderMiniProductCardElements() {
+        let miniProductCardElements = []
+        for(let i = 0; i < data.others.length; i++) {
+            miniProductCardElements.push(
+                <ProductCardMini key={i} data={data.others[i]} />
+            )
+        }
+        return miniProductCardElements
+    }
 
     return (
         <section className="productDetail">
@@ -69,7 +128,7 @@ function ProductDetail() {
                     <p className="productDetail_product-count">{productCount}</p>
                     <button onClick={increaseProductCount} className="productDetail_plus">+</button>
                 </div>
-                <button className="shared-btn-style-orange"> add to cart </button>
+                <button onClick={handleAddToCart} className="shared-btn-style-orange"> add to cart </button>
             </div>
             
             <div className="productDetail_features-container">
@@ -81,7 +140,7 @@ function ProductDetail() {
             <div>
                 <h2 className="productDetail_in-box-title">in the box</h2>
                 <div className="productDetail_in-box-outer-container">
-                    {inTheBoxElements}
+                    {renderInTheBoxElements()}
                 </div>
             </div>
 
@@ -95,7 +154,7 @@ function ProductDetail() {
 
             <div className="productDetail_mini-card-container">
                 <h2 className="productDetail_mini-card-title">you may also like</h2>
-                {miniProductCardElements}
+                {renderMiniProductCardElements()}
             </div>
 
             <CategoryList />

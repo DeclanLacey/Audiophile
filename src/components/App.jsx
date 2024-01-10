@@ -4,10 +4,19 @@ import Footer from "./Footer"
 import ProductList from "./ProductList"
 import ProductDetail from "./ProductDetail"
 import {Routes, Route} from "react-router-dom"
+import { createContext, useState } from "react"
 import "../styles/App.css"
 
-function App() {
+const ShoppingCartContext = createContext()
+export {ShoppingCartContext}
+
+export default function App() {
+
+  const [shoppingCart, setShoppingCart] = useState([])
+  console.log(shoppingCart)
+
   return (
+    <ShoppingCartContext.Provider value={{shoppingCart, setShoppingCart}}>
       <main className="page-container">
         <div className="content-wrap">
           <Header />
@@ -21,7 +30,7 @@ function App() {
 
         <Footer />
       </main>
+    </ShoppingCartContext.Provider>
   )
 }
 
-export default App
