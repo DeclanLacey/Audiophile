@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom"
+import { useEffect } from "react"
 import CategoryList from "./CategoryList"
 import ProductHighlights from "./ProductHighlights"
 import CompanyAbout from "./CompanyAbout"
@@ -6,6 +7,11 @@ import "../styles/Homepage.css"
 
 
 function Homepage() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return (
         <div>
             <section className="homepage_main-img-container">
