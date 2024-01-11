@@ -13,7 +13,6 @@ export {ShoppingCartContext}
 export default function App() {
 
   const [shoppingCart, setShoppingCart] = useState([])
-  console.log(shoppingCart)
 
   return (
     <ShoppingCartContext.Provider value={{shoppingCart, setShoppingCart}}>
