@@ -52,6 +52,7 @@ function ProductDetail() {
                         ...prevState,
                         {
                             "name": data.name,
+                            "shortName": data.shortname,
                             "price": data.price,
                             "picture": data.image.mobile,
                             "count": newCount
@@ -67,6 +68,7 @@ function ProductDetail() {
                      ...prevState,
                      {
                          "name": data.name,
+                         "shortName": data.shortname,
                          "price": data.price,
                          "picture": data.image.mobile,
                          "count": productCount

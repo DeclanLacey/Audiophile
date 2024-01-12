@@ -1,0 +1,122 @@
+
+.checkout_go-back-text {
+    margin-top: 0px;
+    padding-top: 110px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 500;
+    opacity: 0.5;
+    line-height: 1.5625rem;
+    cursor: pointer;
+}
+
+.checkout_title {
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    margin-top: 0px;
+}
+
+.checkout_form-container {
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.checkout_section-title {
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5625rem; /* 192.308% */
+    letter-spacing: 0.05806rem;
+    text-transform: uppercase;
+    color: #D87D4A;
+}
+
+.checkout_btn {
+    width: 100% !important;
+}
+
+/* ///////// Input styling //////// */
+
+.checkout_input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.checkout_input-label {
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.01338rem;
+}
+
+.checkout_input {
+    height: 56px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #CFCFCF;
+    background: #FFF;
+    padding-left: 20px;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.01563rem;
+}
+
+.checkout_input:active {
+    border: 1px solid #D87D4A;
+}
+
+.checkout_input:hover {
+    border: 1px solid #D87D4A
+}
+
+.checkout_input::placeholder {
+    opacity: 0.4;
+}
+
+.checkout_radio-inner-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #CFCFCF;
+    height: 56px;
+    gap: 20px;
+    padding-left: 10px;
+    border-radius: 8px;
+
+}
+
+.checkout_radio-input {
+    width: 20px;
+    height: 20px;
+    stroke-width: 1px;
+    stroke: #CFCFCF;
+}
+
+.checkout_radio-label {
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.01563rem;
+}
+
+input[type='radio'] {
+    accent-color: #D87D4A;
+}
+
+/* //////////// summmary styling //////////// */

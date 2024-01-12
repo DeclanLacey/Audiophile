@@ -1,10 +1,10 @@
 import { ShoppingCartContext } from "./App"
-import "../styles/CartModal.css"
 import { useContext, useEffect, useState } from "react"
 import {Link} from "react-router-dom"
-import ProductCard from "./ProductCard"
+import "../styles/CartModal.css"
 
-function CartModal() {
+
+function CartModal(props) {
 
     const {shoppingCart, setShoppingCart} = useContext(ShoppingCartContext)
     const [cartTotal, setCartTotal] = useState()
@@ -56,7 +56,7 @@ function CartModal() {
                     <div className="cartModal_product-img-name-container">
                         <img className="cartModal_product-img" src={`.${shoppingCart[i].picture}`} />
                         <div className="cartModal_name-price-container">
-                            <p className="cartModal_name"> {shoppingCart[i].name}</p>
+                            <p className="cartModal_name"> {shoppingCart[i].shortName}</p>
                             <p className="cartModal_price"> {formatCurrency(shoppingCart[i].price)}</p>
                         </div>
                     </div>
@@ -89,6 +89,10 @@ function CartModal() {
         }
     }
 
+    function clearCart() {
+        setShoppingCart([])
+    }
+
     useEffect(() => {
         checkForZeroProductCount()
     })
@@ -98,7 +102,7 @@ function CartModal() {
             <div> </div>
             <div className="cartModal_cart-name-container">
                 <h1 className="cartModal_item-count">Cart ({shoppingCart.length})</h1>
-                <p className="cartModal_remove-all-text"> Remove all</p>
+                <p onClick={clearCart} className="cartModal_remove-all-text"> Remove all</p>
             </div>
             {renderShoppingCartItems()}
 
@@ -106,7 +110,7 @@ function CartModal() {
                 <p className="cartModal_total-title">Total</p>
                 <p className="cartModal_total-value">{formatCurrency(getTotalPrice())}</p>
             </div>
-            <Link to=""><button className="shared-btn-style-orange cartModal_btn"> checkout</button></Link>
+            <Link onClick={() => props.setShoppingCartOpen(false)} to="/Checkout"><button className="shared-btn-style-orange cartModal_btn"> checkout</button></Link>
         </section>
     )
 }

@@ -7,7 +7,7 @@ import "../styles/Header.css"
 function Header() {
 
     const [burgerMenuOpen, setBurgerMenuOpen] = useState(false)
-    const [shoppingCartOpen, setShoppingCartOpen] = useState(true)
+    const [shoppingCartOpen, setShoppingCartOpen] = useState(false)
 
     function handleBurgerMenuClick() {
         setBurgerMenuOpen(prevState => !prevState)
@@ -30,7 +30,7 @@ function Header() {
 
             <div className={shoppingCartOpen ? "header_shopping-cart-page-cover" : "header_shopping-cart-page-cover header_hide"}></div>
             <div className={shoppingCartOpen ? "header_shopping-cart-content" : "header_shopping-cart-content header_hide"}>
-                <CartModal />
+                <CartModal setShoppingCartOpen={setShoppingCartOpen} />
             </div>
 
             <svg onClick={handleBurgerMenuClick} className="header_svg burger-menu" width="16" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fillRule="evenodd"><path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z"/></g></svg>
