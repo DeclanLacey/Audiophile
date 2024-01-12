@@ -7,7 +7,7 @@ import "../styles/Header.css"
 function Header() {
 
     const [burgerMenuOpen, setBurgerMenuOpen] = useState(false)
-    const [shoppingCartOpen, setShoppingCartOpen] = useState(false)
+    const [shoppingCartOpen, setShoppingCartOpen] = useState(true)
 
     function handleBurgerMenuClick() {
         setBurgerMenuOpen(prevState => !prevState)

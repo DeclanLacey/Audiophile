@@ -12,7 +12,21 @@ export {ShoppingCartContext}
 
 export default function App() {
 
-  const [shoppingCart, setShoppingCart] = useState([])
+  const [shoppingCart, setShoppingCart] = useState([
+    {
+      "name": "YX1 Wireless Earphones",
+      "price": 599,
+      "picture": "./assets/product-yx1-earphones/mobile/image-product.jpg",
+      "count": 2
+    }
+    ,
+    {
+      "name": "XX59 Headphones",
+      "price": 899,
+      "picture": "./assets/product-xx59-headphones/mobile/image-product.jpg",
+      "count": 1
+  }
+  ])
 
   return (
     <ShoppingCartContext.Provider value={{shoppingCart, setShoppingCart}}>
