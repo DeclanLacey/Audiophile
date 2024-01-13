@@ -22,13 +22,17 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: transform 500ms;
     margin-top: 10px;
+    transition-property: background-color, color, border;
+    transition-duration: 800ms; 
+    transition-timing-function: ease-out; 
 }
 
 .productHighlights_product-two-btn:hover,
 .productHighlights_product-three-btn:hover {
-    transform: scale(1.07);
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
 }
 
 /* ///// Product One styling ///////// */
@@ -92,13 +96,15 @@
     text-transform: uppercase;
     width: 160px;
     height: 48px;
-    border: none;
+    border: 2px solid black;
     cursor: pointer;
-    transition: transform 500ms;
+    transition-property: background-color, color, border;
+    transition-duration: 800ms;
 }
 
 .productHighlights_product-one-btn:hover {
-    transform: scale(1.07);
+    background-color: transparent;
+    color: black;
 }
 
 /* ////// Product Two Styling ////// */

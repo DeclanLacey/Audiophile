@@ -21,19 +21,8 @@
     object-fit: cover;
     position: absolute;
     margin-top: -50px;
-}
-
-.categoryList_img-one {
     width: 147px;
     height: 143px;
-    flex-shrink: 0;
-}
-
-.categoryList_img-two, 
-.categoryList_img-three {
-    width: 147px;
-    height: 133px;
-    flex-shrink: 0;
 }
 
 .categoryList_name {
@@ -67,4 +56,11 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     width: 60px;
+    transition-property: color, opacity;
+    transition-duration: 350ms;
+}
+
+.categoryList_link:hover {
+    color: #D87D4A;
+    opacity: 1;
 }

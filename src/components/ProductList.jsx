@@ -1,5 +1,5 @@
-import {Link, useLocation} from "react-router-dom"
-import { useEffect, useState, useSyncExternalStore } from "react"
+import { useLocation} from "react-router-dom"
+import { useEffect, useState } from "react"
 import CategoryList from "./CategoryList"
 import CompanyAbout from "./CompanyAbout"
 import ProductCard from "./ProductCard"

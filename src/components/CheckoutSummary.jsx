@@ -47,7 +47,7 @@ function CheckoutSummary(props) {
                 <p className="checkoutSummary_breakdown-line-title">Grand Total</p>
                 <p className="checkoutSummary_breakdown-line-value checkoutSummary_grand-total-text">{utils.formatCurrency(utils.calculateTotals(shoppingCartData).grandTotal)}</p>
             </div>
-            <button onSubmit={props.handleSubmit} type="submit" className="shared-btn-style-orange checkout_btn"> Continue & Pay </button>
+            <button type="submit" className="shared-btn-style-orange checkout_btn"> Continue & Pay </button>
         </section>
     )
 }

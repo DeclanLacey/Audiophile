@@ -22,14 +22,13 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem("shoppingcart", JSON.stringify(shoppingCart))
   }, [shoppingCart])
-  
 
   return (
     <ShoppingCartContext.Provider value={{shoppingCart, setShoppingCart}}>
       <main className="page-container">
+
         <div className="content-wrap">
           <Header />
-
           <Routes>
             <Route exact path="/" element={<Homepage />} />
             <Route exact path="/ProductList" element={<ProductList/>} />
@@ -39,6 +38,7 @@ export default function App() {
         </div> 
 
         <Footer />
+
       </main>
     </ShoppingCartContext.Provider>
   )

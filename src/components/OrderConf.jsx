@@ -1,12 +1,18 @@
 import { ShoppingCartContext } from "./App"
+import { Link } from "react-router-dom"
 import { useContext } from "react"
 import * as utils from "../Utils.js"
-
 import "../styles/OrderConf.css"
 
-function OrderConf() {
+function OrderConf(props) {
 
     const {shoppingCart, setShoppingCart} = useContext(ShoppingCartContext)
+
+    function handleGoHomeClick() {
+        props.setCartSubmitted(false)
+        localStorage.clear()
+        setShoppingCart([])
+    }
 
     return (
         <div className="orderConf_container">
@@ -39,7 +45,7 @@ function OrderConf() {
                         <p className="orderConf_grand-total-value"> {utils.formatCurrency(utils.calculateTotals(shoppingCart).grandTotal)}</p>
                     </div>
 
-                    <button className="shared-btn-style-orange orderConf_btn"> back to home </button>
+                    <Link to="/"><button onClick={handleGoHomeClick} className="shared-btn-style-orange orderConf_btn"> back to home </button></Link>
                 </div>
             </div>
         </div>

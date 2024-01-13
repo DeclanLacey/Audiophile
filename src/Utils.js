@@ -1,3 +1,4 @@
+import { useLocation} from "react-router-dom"
 
 export function calculateTotals(data) {
     let total = 0
@@ -13,8 +14,6 @@ export function calculateTotals(data) {
     return {total, shipping, vat, grandTotal}
 }
 
-
-
 export function formatCurrency(input) {
     const options = { style: 'currency', currency: 'USD', maximumSignificantDigits: 5  };
     let formatter = new Intl.NumberFormat('en-US', options);
@@ -22,4 +21,13 @@ export function formatCurrency(input) {
     return input
 }
 
+export function disableOrEnableShoppingCart(shoppingCartIcon) {
+    if(useLocation().pathname === "/Checkout") {
+        shoppingCartIcon.classList.add("disable")
+    }else if (useLocation().pathname !== "/Checkout") {
+        if (shoppingCartIcon) {
+            shoppingCartIcon.classList.remove("disable")
+        }
+    }
+}
 

@@ -2,9 +2,8 @@ import {Link} from "react-router-dom"
 import "../styles/ProductCardMini.css"
 
 function ProductCardMini(props) {
-
     const data = props.data
-
+    
     return (
         <section className="productCardMini">
             <img className="productCardMini_img" src={`.${data.image.mobile}`} />

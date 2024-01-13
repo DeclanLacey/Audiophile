@@ -1,6 +1,6 @@
 import { ShoppingCartContext } from "./App"
-import { useContext, useEffect, useState } from "react"
-import {Link, useLocation, useNavigate} from "react-router-dom"
+import { useContext, useState } from "react"
+import { useNavigate} from "react-router-dom"
 import OrderConf from "./OrderConf"
 import CheckoutSummary from "./CheckoutSummary"
 import "../styles/Checkout.css"
@@ -18,10 +18,6 @@ function Checkout() {
         }
     }
 
-    function handleGoBackClick() {
-        navigate(-1)
-    }
-
     function handleSubmit(event) {
         event.preventDefault()
         setCartSubmitted(true)
@@ -35,14 +31,14 @@ function Checkout() {
                 <>
                     <div className="checkout_page-cover"></div>
                     <div> 
-                        <OrderConf />
+                        <OrderConf setCartSubmitted={setCartSubmitted} />
                     </div>
                 </>
                 :
                     <></>
             }
-            <p onClick={handleGoBackClick} className="checkout_go-back-text">Go Back</p>
-            <form>
+            <p onClick={() => navigate(-1)} className="checkout_go-back-text">Go Back</p>
+            <form onSubmit={handleSubmit} >
                 <section className="checkout_form-container">
                     <h1 className="checkout_title">Checkout</h1>
                     
@@ -110,10 +106,8 @@ function Checkout() {
                             :
                             <></>
                         }
-                        
-                    
                 </section>
-                <CheckoutSummary handleSubmit={handleSubmit} shoppingCartData={shoppingCart} />
+                <CheckoutSummary shoppingCartData={shoppingCart} />
             </form>
         </div>
     )

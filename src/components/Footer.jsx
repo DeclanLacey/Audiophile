@@ -6,7 +6,6 @@ function Footer() {
         <footer className="footer">
 
             <img className="footer_logo" src="/assets/shared/desktop/logo.svg" />
-
             <div className="footer_nav-container">
                 <Link to="/"> <button className="footer_nav-link"> home </button></Link>
                 <Link to="/ProductList" state={{ category: "headphones"}}> <button className="footer_nav-link"> headphones </button></Link>

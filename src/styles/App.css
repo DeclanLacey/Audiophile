@@ -23,4 +23,13 @@
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 350ms;
+}
+
+.shared-btn-style-orange:hover {
+    background-color: #FBAF85;
+}
+
+.disable {
+    pointer-events: none;
 }

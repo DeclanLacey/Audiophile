@@ -51,6 +51,22 @@
     display: none;
 }
 
+.header_cart-num {
+    position: absolute;
+    color: white;
+    background-color: #D87D4A;
+    border-radius: 50px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    top: 28px;
+    right: 13px;
+    cursor: pointer;
+}
+
 /* ///// shopping cart ////// */
 
 .header_shopping-cart-content {

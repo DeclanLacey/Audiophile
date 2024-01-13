@@ -1,5 +1,5 @@
 import * as utils from "../Utils.js"
-import {Link, useLocation, useNavigate} from "react-router-dom"
+import { useLocation, useNavigate} from "react-router-dom"
 import { useEffect, useState, useContext } from "react"
 import {ShoppingCartContext} from "./App.jsx"
 import CategoryList from "./CategoryList"
@@ -30,9 +30,7 @@ function ProductDetail() {
     }
 
     function decreaseProductCount() {
-        if (productCount === 1) {
-
-        }else {
+        if (productCount > 1) {
             setProductCount(prevState => prevState - 1)
         }
     }

@@ -49,22 +49,9 @@
 }
 
 .homepage_main-img-btn {
-    background-color: #D87D4A;
-    text-decoration: none;
-    color: white;
-    width: 160px;
-    height: 48px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    cursor: pointer;
-    transition: transform 600ms;
     margin-top: 15px;
 }
 
-.homepage_main-img-btn:hover {
-    transform: scale(1.07);
-}
+
 
 
