@@ -1,3 +1,4 @@
+import * as utils from "../Utils.js"
 import {Link, useLocation, useNavigate} from "react-router-dom"
 import { useEffect, useState, useContext } from "react"
 import {ShoppingCartContext} from "./App.jsx"
@@ -14,14 +15,11 @@ function ProductDetail() {
     const location = useLocation()
     const data = location.state
     const navigate = useNavigate()
+    
     const shortProductName = data.name.substring(0, data.name.lastIndexOf(" "))
     const featureTextFirstHalf = data.features.match(/^(.*)(.{3})/).slice(1).join('')
     const featureTextSecondHalf = data.features.replace(featureTextFirstHalf, "")
-
-
-    const options = { style: 'currency', currency: 'USD', maximumSignificantDigits: 5  };
-    let formatter = new Intl.NumberFormat('en-US', options);
-    let price = formatter.format(data.price)
+    let price = utils.formatCurrency(data.price)
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -52,7 +50,7 @@ function ProductDetail() {
                         ...prevState,
                         {
                             "name": data.name,
-                            "shortName": data.shortname,
+                            "shortName": data.shortName,
                             "price": data.price,
                             "picture": data.image.mobile,
                             "count": newCount
@@ -68,7 +66,7 @@ function ProductDetail() {
                      ...prevState,
                      {
                          "name": data.name,
-                         "shortName": data.shortname,
+                         "shortName": data.shortName,
                          "price": data.price,
                          "picture": data.image.mobile,
                          "count": productCount

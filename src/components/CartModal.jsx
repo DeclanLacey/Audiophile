@@ -1,3 +1,4 @@
+import * as utils from "../Utils.js"
 import { ShoppingCartContext } from "./App"
 import { useContext, useEffect, useState } from "react"
 import {Link} from "react-router-dom"
@@ -9,14 +10,6 @@ function CartModal(props) {
     const {shoppingCart, setShoppingCart} = useContext(ShoppingCartContext)
     const [cartTotal, setCartTotal] = useState()
     let shoppingCartItemElements = []
-
-
-    function formatCurrency(num) {
-        const options = { style: 'currency', currency: 'USD', maximumSignificantDigits: 5  };
-        let formatter = new Intl.NumberFormat('en-US', options);
-        let price = formatter.format(num)
-        return price
-    }
 
     function changeCount(event, plusOrMinus) {
         const productElementId = parseInt(event.target.parentNode.parentNode.getAttribute('cartid'))
@@ -57,7 +50,7 @@ function CartModal(props) {
                         <img className="cartModal_product-img" src={`.${shoppingCart[i].picture}`} />
                         <div className="cartModal_name-price-container">
                             <p className="cartModal_name"> {shoppingCart[i].shortName}</p>
-                            <p className="cartModal_price"> {formatCurrency(shoppingCart[i].price)}</p>
+                            <p className="cartModal_price"> {utils.formatCurrency(shoppingCart[i].price)}</p>
                         </div>
                     </div>
                     
@@ -108,7 +101,7 @@ function CartModal(props) {
 
             <div className="cartModal_total-container">
                 <p className="cartModal_total-title">Total</p>
-                <p className="cartModal_total-value">{formatCurrency(getTotalPrice())}</p>
+                <p className="cartModal_total-value">{utils.formatCurrency(getTotalPrice())}</p>
             </div>
             <Link onClick={() => props.setShoppingCartOpen(false)} to="/Checkout"><button className="shared-btn-style-orange cartModal_btn"> checkout</button></Link>
         </section>

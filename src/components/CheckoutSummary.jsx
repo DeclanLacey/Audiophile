@@ -1,25 +1,9 @@
+import * as utils from "../Utils"
 import "../styles/CheckoutSummary.css"
 
 function CheckoutSummary(props) {
-
     const shoppingCartData = props.shoppingCartData
-    const options = { style: 'currency', currency: 'USD', maximumSignificantDigits: 5  };
-    let formatter = new Intl.NumberFormat('en-US', options);
-
-    function caclTotals() {
-        let total = 0
-        let shipping = 50
-        let vat = 0
-        let grandTotal = 0
-        for(let i = 0; i < shoppingCartData.length; i++) {
-            total += (shoppingCartData[i].price * shoppingCartData[i].count)
-        }
-        vat = Math.round((total * .20))
-        grandTotal = total + shipping
-
-        return {total, shipping, vat, grandTotal}
-    }
-
+    
     function renderSummaryElements() {
         let summaryElements = []
         for(let i = 0; i < shoppingCartData.length; i++) {
@@ -29,7 +13,7 @@ function CheckoutSummary(props) {
                         <img className="checkoutSummary_product-img" src={`${shoppingCartData[i].picture}`}/>
                         <div>
                             <p className="checkoutSummary_name"> {shoppingCartData[i].shortName} </p>
-                            <p className="checkoutSummary_price"> {formatter.format(shoppingCartData[i].price)}</p>
+                            <p className="checkoutSummary_price"> {utils.formatCurrency(shoppingCartData[i].price)}</p>
                         </div>
                     </div>
                     <p className="checkoutSummary_count"> x{shoppingCartData[i].count} </p>
@@ -39,7 +23,6 @@ function CheckoutSummary(props) {
         return summaryElements
     }
 
-
     return (
         <section className="checkoutSummary_container">
             <h1 className="checkoutSummary_title">Summary</h1>
@@ -47,24 +30,24 @@ function CheckoutSummary(props) {
 
             <div className="checkoutSummary_price-breakdown-container">
                 <p className="checkoutSummary_breakdown-line-title">Total</p>
-                <p className="checkoutSummary_breakdown-line-value">{formatter.format(caclTotals().total)}</p>
+                <p className="checkoutSummary_breakdown-line-value">{utils.formatCurrency(utils.calculateTotals(shoppingCartData).total)}</p>
             </div>
 
             <div className="checkoutSummary_price-breakdown-container">
                 <p className="checkoutSummary_breakdown-line-title">Shipping</p>
-                <p className="checkoutSummary_breakdown-line-value">{formatter.format(caclTotals().shipping)}</p>
+                <p className="checkoutSummary_breakdown-line-value">{utils.formatCurrency(utils.calculateTotals(shoppingCartData).shipping)}</p>
             </div>
 
             <div className="checkoutSummary_price-breakdown-container">
                 <p className="checkoutSummary_breakdown-line-title">Vat (Included)</p>
-                <p className="checkoutSummary_breakdown-line-value">{formatter.format(caclTotals().vat)}</p>
+                <p className="checkoutSummary_breakdown-line-value">{utils.formatCurrency(utils.calculateTotals(shoppingCartData).vat)}</p>
             </div>
 
             <div className="checkoutSummary_price-breakdown-container checkoutSummary_grand-total-container">
                 <p className="checkoutSummary_breakdown-line-title">Grand Total</p>
-                <p className="checkoutSummary_breakdown-line-value checkoutSummary_grand-total-text">{formatter.format(caclTotals().grandTotal)}</p>
+                <p className="checkoutSummary_breakdown-line-value checkoutSummary_grand-total-text">{utils.formatCurrency(utils.calculateTotals(shoppingCartData).grandTotal)}</p>
             </div>
-            <button className="shared-btn-style-orange checkout_btn"> Continue & Pay </button>
+            <button onSubmit={props.handleSubmit} type="submit" className="shared-btn-style-orange checkout_btn"> Continue & Pay </button>
         </section>
     )
 }

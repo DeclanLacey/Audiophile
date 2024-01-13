@@ -5,7 +5,7 @@ import ProductList from "./ProductList"
 import ProductDetail from "./ProductDetail"
 import Checkout from "./Checkout"
 import {Routes, Route} from "react-router-dom"
-import { createContext, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 import "../styles/App.css"
 
 const ShoppingCartContext = createContext()
@@ -13,23 +13,16 @@ export {ShoppingCartContext}
 
 export default function App() {
 
-  const [shoppingCart, setShoppingCart] = useState([
-    {
-      "name": "YX1 Wireless Earphones",
-      "shortName": "YX1",
-      "price": 599,
-      "picture": "./assets/product-yx1-earphones/mobile/image-product.jpg",
-      "count": 2
-    }
-    ,
-    {
-      "name": "XX59 Headphones",
-      "shortName": "XX59",
-      "price": 899,
-      "picture": "./assets/product-xx59-headphones/mobile/image-product.jpg",
-      "count": 1
-  }
-  ])
+  const [shoppingCart, setShoppingCart] = useState(() => {
+    const savedData = localStorage.getItem("shoppingcart")
+    const intialValue = JSON.parse(savedData)
+    return intialValue || []
+  })
+  
+  useEffect(() => {
+    localStorage.setItem("shoppingcart", JSON.stringify(shoppingCart))
+  }, [shoppingCart])
+  
 
   return (
     <ShoppingCartContext.Provider value={{shoppingCart, setShoppingCart}}>
