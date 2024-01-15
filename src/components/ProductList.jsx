@@ -5,7 +5,6 @@ import CompanyAbout from "./CompanyAbout"
 import ProductCard from "./ProductCard"
 import fullProductData from "../data.json"
 import "../styles/ProductList.css"
-import { render } from "react-dom"
 
 function ProductList() {
     useEffect(() => {

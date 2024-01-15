@@ -20,7 +20,7 @@ function CategoryList(props) {
                     <img className="categoryList_img" src={categoryPhotoLinks[i]} />
                     <h2 className="categoryList_name"> {categoryNames[i]}</h2>
                     <div className="categoryList_link-container">
-                        <Link onClick={props.onClick} to="/ProductList" state={{ category: categoryNames[i]}} className="categoryList_link">shop </Link>
+                        <Link alt="link to shop the selected category" onClick={props.onClick} to="/ProductList" state={{ category: categoryNames[i]}} className="categoryList_link">shop </Link>
                         <svg className="categoryList_svg" xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
                             <path d="M1.32178 1L6.32178 6L1.32178 11" stroke="#D87D4A" strokeWidth="2"/>
                         </svg>

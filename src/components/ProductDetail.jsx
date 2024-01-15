@@ -117,7 +117,7 @@ function ProductDetail() {
             
             <div className="productDetail_upper-section-container">
                 <div className="productDetail_product-img-background">
-                    <div className="productDetail_product-img" style={{backgroundImage: `url(.${data.image.desktop})`}}> </div>
+                    <div alt={`image of ${data.name}`} className="productDetail_product-img" style={{backgroundImage: `url(.${data.image.desktop})`}}> </div>
                 </div>
                 <div className="productDetail_product-main-info">
                     <p className="productDetail_new-product">{data.new ? "new product" : ""}</p>
@@ -152,10 +152,10 @@ function ProductDetail() {
 
             <div className="productDetail_extra-img-container">
                 <div className="productDetail_extra-img-inner-container">
-                    <img src={`.${data.gallery.first.mobile}`} className="productDetail_extra-img" />
-                    <img src={`.${data.gallery.second.mobile}`} className="productDetail_extra-img" />
+                    <img alt="image showing off the product in everyday life" src={`.${data.gallery.first.mobile}`} className="productDetail_extra-img" />
+                    <img alt="image showing off the product in everyday life" src={`.${data.gallery.second.mobile}`} className="productDetail_extra-img" />
                 </div>
-                <img src={`.${data.gallery.third.mobile}`} className="productDetail_extra-img productDetail_extra-img-right"/>
+                <img alt="image showing off the product in everyday life" src={`.${data.gallery.third.mobile}`} className="productDetail_extra-img productDetail_extra-img-right"/>
             </div>
 
             <ProductCardMini data={data} />

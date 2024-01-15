@@ -8,7 +8,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .footer_logo {
@@ -89,6 +89,7 @@
 
     .footer {
         padding: 30px;
+        align-items: flex-start;
     }
 
     .footer_nav-container {

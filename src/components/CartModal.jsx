@@ -48,7 +48,7 @@ function CartModal(props) {
                 <div className="cartModal_product-container" cartid={i} key={i}>
 
                     <div className="cartModal_product-img-name-container">
-                        <img className="cartModal_product-img" src={`.${shoppingCart[i].picture}`} />
+                        <img alt="image of product inside of the shopping cart" className="cartModal_product-img" src={`.${shoppingCart[i].picture}`} />
                         <div className="cartModal_name-price-container">
                             <p className="cartModal_name"> {shoppingCart[i].shortName}</p>
                             <p className="cartModal_price"> {utils.formatCurrency(shoppingCart[i].price)}</p>
@@ -56,9 +56,9 @@ function CartModal(props) {
                     </div>
                     
                     <div className="cartModal_plus-minus-container">
-                        <button onClick={(event) => changeCount(event,"minus")} className="cartModal_minus">-</button>
+                        <button alt="minus button" onClick={(event) => changeCount(event,"minus")} className="cartModal_minus">-</button>
                         <p className="cartModal_product-count">{shoppingCart[i].count}</p>
-                        <button onClick={(event) => changeCount(event, "plus")} className="cartModal_plus">+</button>
+                        <button alt="plus button" onClick={(event) => changeCount(event, "plus")} className="cartModal_plus">+</button>
                     </div>
                     
                 </div>
@@ -97,7 +97,7 @@ function CartModal(props) {
             {/* shows or hides checkout btn depending on if there are any items in the cart */}
             {
                 shoppingCart.length > 0 ?
-                    <Link onClick={() => props.setShoppingCartOpen(false)} to="/Checkout"><button className="shared-btn-style-orange cartModal_btn"> checkout</button></Link>
+                    <Link alt="link to checkout with the items in the cart" onClick={() => props.setShoppingCartOpen(false)} to="/Checkout"><button className="shared-btn-style-orange cartModal_btn"> checkout</button></Link>
                 : 
                     <></>
             }

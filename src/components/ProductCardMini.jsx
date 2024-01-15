@@ -22,10 +22,10 @@ function ProductCardMini(props) {
             miniProductCardElements.push(
                 <section key={i} className="productCardMini">
                     <div className="productCardMini_img-background">
-                        <div className="productCardMini_img" style={{backgroundImage: `url(.${data.others[i].image.desktop})`}}> </div>
+                        <div alt="image of product" className="productCardMini_img" style={{backgroundImage: `url(.${data.others[i].image.desktop})`}}> </div>
                     </div>
                     <h1 className="productCardMini_name"> {data.others[i].name}</h1>
-                    <Link to={"/ProductList/ProductDetail"} state={findOtherItemData(data.others[i].name)}><button className="shared-btn-style-orange"> see product </button></Link>
+                    <Link alt="link to more info on the product" to={"/ProductList/ProductDetail"} state={findOtherItemData(data.others[i].name)}><button className="shared-btn-style-orange"> see product </button></Link>
                 </section>
             )
         }

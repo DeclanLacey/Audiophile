@@ -214,7 +214,7 @@
     }
 
     .productHighlights_image-cover {
-        width: 100%;
+        width: 90%;
         height: 15px;
         z-index: 100;
         margin-bottom: 30px;
@@ -229,7 +229,6 @@
         justify-content: flex-start;
         align-items: flex-start;
         margin-left: 100px;
-
     }
 
     .productHighlights_product-one-desc, 

@@ -10,7 +10,7 @@ function CheckoutSummary(props) {
             summaryElements.push(
                 <div className="checkoutSummary_product-container" key={i}>
                     <div className="checkoutSummary_product-container-inner">
-                        <img className="checkoutSummary_product-img" src={`${shoppingCartData[i].picture}`}/>
+                        <img alt=" pciture of item in checkout " className="checkoutSummary_product-img" src={`${shoppingCartData[i].picture}`}/>
                         <div>
                             <p className="checkoutSummary_name"> {shoppingCartData[i].shortName} </p>
                             <p className="checkoutSummary_price"> {utils.formatCurrency(shoppingCartData[i].price)}</p>

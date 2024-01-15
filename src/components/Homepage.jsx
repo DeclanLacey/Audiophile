@@ -27,7 +27,7 @@ function Homepage() {
     return (
         <div>
             <section className="homepage_main-img-container">
-                <div className="homepage_main-img"> </div>
+                <div alt="image of a pair of headphones with a black background" className="homepage_main-img"> </div>
                 <div className="homepage_main-img-text-container">
                     <h2 className="homepage_main-img-subtitle"> new product </h2>
                     <h1 className="homepage_main-img-title"> XX99 mark II <br/> headphones </h1>

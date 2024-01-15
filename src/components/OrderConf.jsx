@@ -17,14 +17,14 @@ function OrderConf(props) {
     return (
         <div className="orderConf_container">
             <div className="orderConf_conf-container">
-                <svg className="orderConf_svg" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><circle fill="#D87D4A" cx="32" cy="32" r="32"/><path stroke="#FFF" strokeWidth="4" d="m20.754 33.333 6.751 6.751 15.804-15.803"/></g></svg>
+                <svg alt="orange circle with a white checkmark inside of it" className="orderConf_svg" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><circle fill="#D87D4A" cx="32" cy="32" r="32"/><path stroke="#FFF" strokeWidth="4" d="m20.754 33.333 6.751 6.751 15.804-15.803"/></g></svg>
                 <h1 className="orderConf_title">thank you for your order</h1>
                 <p className="orderConf_email-text">You will receive an email confirmation shortly.</p>
 
                 <div className="orderConf_content-container">
                     <div className="orderConf_product-container">
                         <div className="orderConf_product-card">
-                            <img className="orderConf_product-img" src={shoppingCart[0].picture}/>
+                            <img alt="image of one of the products purchased" className="orderConf_product-img" src={shoppingCart[0].picture}/>
                             <div className="orderConf_product-card-inner-container">
                                 <div>
                                     <p className="orderConf_product-name">{shoppingCart[0].shortName}</p>
@@ -50,7 +50,7 @@ function OrderConf(props) {
                         <p className="orderConf_grand-total-value"> {utils.formatCurrency(utils.calculateTotals(shoppingCart).grandTotal)}</p>
                     </div>
                 </div>    
-                <Link to="/"><button onClick={handleGoHomeClick} className="shared-btn-style-orange orderConf_btn"> back to home </button></Link>
+                <Link alt="link to go back to the homepage" to="/"><button onClick={handleGoHomeClick} className="shared-btn-style-orange orderConf_btn"> back to home </button></Link>
             </div>
         </div>
     )
