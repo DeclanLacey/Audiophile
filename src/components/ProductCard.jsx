@@ -7,12 +7,14 @@ function ProductCard(props) {
 
     return (
         <section className="productCard">
-            <img className="productCard_img" src={data.image.mobile} />
+            <div className="productCard_img-background">
+                <div className="productCard_img" style={{backgroundImage: `url(${data.image.desktop})`}}> </div>
+            </div>
             <div className="productCard_content-container">
                 <p className="productCard_new-product"> {data.new ? "new product" : ""} </p>
                 <h1 className="productCard_name"> {shortProductName}<br></br> {data.category} </h1>
                 <p className="productCard_desc"> {data.description} </p>
-                <Link to="/ProductList/ProductDetail" state={data}> <button className="productCard_btn-link">see product</button> </Link>
+                <Link to="/ProductList/ProductDetail" state={data}> <button className="productCard_btn-link shared-btn-style-orange">see product</button> </Link>
             </div>
         </section>
     )

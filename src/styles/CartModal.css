@@ -4,6 +4,7 @@
     z-index: 1000;
     padding: 15px;
     border-radius: 8px;
+    max-width: 500px;
 }
 
 .cartModal_cart-name-container {
@@ -141,4 +142,9 @@
     text-transform: uppercase;
     font-size: 0.8125rem;
 
+}
+
+
+@media screen and (min-width: 750px) {
+    
 }

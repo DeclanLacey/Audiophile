@@ -8,7 +8,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .footer_logo {
@@ -37,6 +37,11 @@
     color: white;
     font-size: 0.8125rem;
     cursor: pointer;
+    transition: color 700ms;
+}
+
+.footer_nav-link:hover {
+    color: #D87D4A;
 }
 
 .footer_company-desc {
@@ -74,4 +79,34 @@
 
 .footer_social-img {
     height: 24px;
+}
+
+@media screen and (min-width: 750px) {
+
+    .footer {
+        padding: 30px;
+    }
+
+    .footer_nav-container {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .footer_company-desc {
+        text-align: left;
+    }
+
+    .footer_bottom-container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .footer_copyright-text {
+        margin: 0px;
+    }
 }

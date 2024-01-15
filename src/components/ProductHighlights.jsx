@@ -30,7 +30,7 @@ function ProductHighlights() {
             </div>
 
             <div className="productHighlights_product-three">
-                <img className="productHighlights_product-three-img" src="/assets/home/mobile/image-earphones-yx1.jpg" />
+                <div className="productHighlights_product-three-img" ></div>
                 <div className="productHighlights_product-three-text-container">
                     <h2 className="productHighlights_product-three-title"> yx1 earphones</h2>
                     <Link to="/ProductList/ProductDetail" state={provideProductInfo("YX1 Wireless Earphones")}> <button className="productHighlights_product-three-btn"> see product </button></Link>

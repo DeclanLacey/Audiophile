@@ -1,11 +1,16 @@
 .companyAbout_container{
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 }
 
 .companyAbout_img {
     border-radius: 8px;
+    background-image: url("/assets/shared/mobile/image-best-gear.jpg");
+    height: 450px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .companyAbout_title {
@@ -30,4 +35,32 @@
     line-height: 25px;
     opacity: 0.5;
     text-align: center;
+}
+
+/* ///////////////// media query ////////////////// */
+
+@media screen and (min-width: 750px) {
+
+    .companyAbout_img {
+        background-image: url("/assets/shared/tablet/image-best-gear.jpg");
+        height: 330px;
+    }
+
+    .companyAbout_title {
+        font-size: 2.5rem;
+        max-width: 600px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .companyAbout_desc {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .companyAbout_container {
+        margin-bottom: -140px;
+    }
 }

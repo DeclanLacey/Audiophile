@@ -1,4 +1,4 @@
-import * as utils from "../Utils.js"
+import * as utils from "../Utils.jsx"
 import { useLocation, useNavigate} from "react-router-dom"
 import { useEffect, useState, useContext } from "react"
 import {ShoppingCartContext} from "./App.jsx"
@@ -12,6 +12,8 @@ function ProductDetail() {
     const [productCount, setProductCount] = useState(1)
     const {shoppingCart, setShoppingCart} = useContext(ShoppingCartContext)
 
+
+
     const location = useLocation()
     const data = location.state
     const navigate = useNavigate()
@@ -22,8 +24,13 @@ function ProductDetail() {
     let price = utils.formatCurrency(data.price)
 
     useEffect(() => {
+        setProductCount(1)
+
+    }, [data])
+
+    useEffect(() => {
         window.scrollTo(0, 0)
-    }, [])
+    })
 
     function increaseProductCount() {
         setProductCount(prevState => prevState + 1)
@@ -101,32 +108,29 @@ function ProductDetail() {
         }
         return inTheBoxElements
     }
-    
-    function renderMiniProductCardElements() {
-        let miniProductCardElements = []
-        for(let i = 0; i < data.others.length; i++) {
-            miniProductCardElements.push(
-                <ProductCardMini key={i} data={data.others[i]} />
-            )
-        }
-        return miniProductCardElements
-    }
 
     return (
         <section className="productDetail">
             <p onClick={() => navigate(-1)} className="productDetail_go-back-text">Go Back</p>
-            <img className="productDetail_product-img" src={`.${data.image.mobile}`} />
-            <p className="productDetail_new-product">{data.new ? "new product" : ""}</p>
-            <h2 className="productDetail_name">{shortProductName}<br></br> {data.category}</h2>
-            <p className="productDetail_desc">{data.description}</p>
-            <p className="productDetail_price">{price}</p>
-            <div className="productDetail_count-cart-container">
-                <div className="productDetail_plus-minus-container">
-                    <button onClick={decreaseProductCount} className="productDetail_minus">-</button>
-                    <p className="productDetail_product-count">{productCount}</p>
-                    <button onClick={increaseProductCount} className="productDetail_plus">+</button>
+            
+            <div className="productDetail_upper-section-container">
+                <div className="productDetail_product-img-background">
+                    <div className="productDetail_product-img" style={{backgroundImage: `url(.${data.image.desktop})`}}> </div>
                 </div>
-                <button onClick={handleAddToCart} className="shared-btn-style-orange"> add to cart </button>
+                <div className="productDetail_product-main-info">
+                    <p className="productDetail_new-product">{data.new ? "new product" : ""}</p>
+                    <h2 className="productDetail_name">{shortProductName}<br></br> {data.category}</h2>
+                    <p className="productDetail_desc">{data.description}</p>
+                    <p className="productDetail_price">{price}</p>
+                    <div className="productDetail_count-cart-container">
+                        <div className="productDetail_plus-minus-container">
+                            <button onClick={decreaseProductCount} className="productDetail_minus">-</button>
+                            <p className="productDetail_product-count">{productCount}</p>
+                            <button onClick={increaseProductCount} className="productDetail_plus">+</button>
+                        </div>
+                        <button onClick={handleAddToCart} className="shared-btn-style-orange"> add to cart </button>
+                    </div>
+                </div>
             </div>
             
             <div className="productDetail_features-container">
@@ -135,7 +139,7 @@ function ProductDetail() {
                 <p className="productDetail_features-text">{featureTextSecondHalf}</p>
             </div>
 
-            <div>
+            <div className="productDetail_in-the-box-container">
                 <h2 className="productDetail_in-box-title">in the box</h2>
                 <div className="productDetail_in-box-outer-container">
                     {renderInTheBoxElements()}
@@ -143,18 +147,14 @@ function ProductDetail() {
             </div>
 
             <div className="productDetail_extra-img-container">
-                <div>
+                <div className="productDetail_extra-img-inner-container">
                     <img src={`.${data.gallery.first.mobile}`} className="productDetail_extra-img" />
                     <img src={`.${data.gallery.second.mobile}`} className="productDetail_extra-img" />
                 </div>
-                <img src={`.${data.gallery.third.mobile}`} className="productDetail_extra-img"/>
+                <img src={`.${data.gallery.third.mobile}`} className="productDetail_extra-img productDetail_extra-img-right"/>
             </div>
 
-            <div className="productDetail_mini-card-container">
-                <h2 className="productDetail_mini-card-title">you may also like</h2>
-                {renderMiniProductCardElements()}
-            </div>
-
+            <ProductCardMini data={data} />
             <CategoryList />
             <CompanyAbout />
         </section>

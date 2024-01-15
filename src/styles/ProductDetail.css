@@ -18,6 +18,16 @@
 
 .productDetail_product-img {
     border-radius: 8px;
+    height: 325px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.productDetail_product-img-background {
+    background-color: #F1F1F1;
+    border-radius: 8px;
 }
 
 .productDetail_new-product {
@@ -29,6 +39,7 @@
     font-size: 0.875rem;
     color: #D87D4A;
     margin-top: 30px;
+    margin-bottom: 0px;
 }
 
 .productDetail_name {
@@ -38,6 +49,7 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     font-size: 1.75rem;
+    margin-top: 10px;
 }
 
 .productDetail_desc {
@@ -169,19 +181,57 @@
     margin-bottom: 20px;
 }
 
-/* ///////////// mini card container styling //////////////// */
+/* ////////////// media query //////////////// */ 
 
-.productDetail_mini-card-container {
-    margin-bottom: 170px;
-    text-align: center;
-}
+@media screen and (min-width: 750px) {
+    .productDetail_upper-section-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 
-.productDetail_mini-card-title {
-    font-style: normal;
-    font-weight: 700;
-    line-height: 2.25rem; /* 150% */
-    letter-spacing: 0.05356rem;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    margin-bottom: 40px;
+    .productDetail_product-img {
+        height: 100%;
+    }
+
+    .productDetail_product-img-background {
+        width: 35%;
+        height: 420px;
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+    }
+
+    .productDetail_product-main-info {
+        width: 55%;
+    }
+
+    .productDetail_in-the-box-container {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .productDetail_in-box-title {
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    .productDetail_extra-img-inner-container {
+        width: 50%;
+        height: 100%;
+    }
+
+    .productDetail_extra-img-container {
+        display: flex;
+        gap: 20px;
+        height: 100%
+    }
+    
+    .productDetail_extra-img-right {
+        width: 48.8%;
+        height: 100%;
+        object-fit: cover;
+    }
 }

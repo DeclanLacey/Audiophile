@@ -20,14 +20,3 @@ export function formatCurrency(input) {
     input = formatter.format(input)
     return input
 }
-
-export function disableOrEnableShoppingCart(shoppingCartIcon) {
-    if(useLocation().pathname === "/Checkout") {
-        shoppingCartIcon.classList.add("disable")
-    }else if (useLocation().pathname !== "/Checkout") {
-        if (shoppingCartIcon) {
-            shoppingCartIcon.classList.remove("disable")
-        }
-    }
-}
-

@@ -15,7 +15,7 @@ function ProductList() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-      }, [category])
+      })
 
     useEffect(() => {
         let tempData = []

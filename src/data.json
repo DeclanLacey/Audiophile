@@ -79,7 +79,7 @@
       },
       {
         "slug": "zx9-speaker",
-        "name": "ZX9 Speaker",
+        "name": "ZX9",
         "image": {
           "mobile": "./assets/shared/mobile/image-zx9-speaker.jpg",
           "tablet": "./assets/shared/tablet/image-zx9-speaker.jpg",
@@ -164,7 +164,7 @@
       },
       {
         "slug": "zx9-speaker",
-        "name": "ZX9 Speaker",
+        "name": "ZX9",
         "image": {
           "mobile": "./assets/shared/mobile/image-zx9-speaker.jpg",
           "tablet": "./assets/shared/tablet/image-zx9-speaker.jpg",
@@ -249,7 +249,7 @@
       },
       {
         "slug": "zx9-speaker",
-        "name": "ZX9 Speaker",
+        "name": "ZX9",
         "image": {
           "mobile": "./assets/shared/mobile/image-zx9-speaker.jpg",
           "tablet": "./assets/shared/tablet/image-zx9-speaker.jpg",
@@ -338,7 +338,7 @@
       },
       {
         "slug": "zx9-speaker",
-        "name": "ZX9 Speaker",
+        "name": "ZX9",
         "image": {
           "mobile": "./assets/shared/mobile/image-zx9-speaker.jpg",
           "tablet": "./assets/shared/tablet/image-zx9-speaker.jpg",
@@ -409,7 +409,7 @@
     "others": [
       {
         "slug": "zx9-speaker",
-        "name": "ZX9 Speaker",
+        "name": "ZX9",
         "image": {
           "mobile": "./assets/shared/mobile/image-zx9-speaker.jpg",
           "tablet": "./assets/shared/tablet/image-zx9-speaker.jpg",
@@ -498,7 +498,7 @@
     "others": [
       {
         "slug": "zx7-speaker",
-        "name": "ZX7 Speaker",
+        "name": "ZX7",
         "image": {
           "mobile": "./assets/shared/mobile/image-zx7-speaker.jpg",
           "tablet": "./assets/shared/tablet/image-zx7-speaker.jpg",

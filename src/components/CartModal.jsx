@@ -1,4 +1,4 @@
-import * as utils from "../Utils.js"
+import * as utils from "../Utils.jsx"
 import { ShoppingCartContext } from "./App"
 import { useContext, useEffect } from "react"
 import {Link} from "react-router-dom"
@@ -79,7 +79,6 @@ function CartModal(props) {
 
     return (
         <section className="cartModal_shopping-cart">
-            <div> </div>
             <div className="cartModal_cart-name-container">
                 <h1 className="cartModal_item-count">Cart ({shoppingCart.length})</h1>
                 <p onClick={() => setShoppingCart([])} className="cartModal_remove-all-text"> Remove all</p>

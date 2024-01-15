@@ -103,3 +103,9 @@
 .checkoutSummary_grand-total-text {
     color: #D87D4A;
 }
+
+@media screen and (min-width: 750px) {
+    .checkoutSummary_container {
+        margin-bottom: -100px;
+    }
+}

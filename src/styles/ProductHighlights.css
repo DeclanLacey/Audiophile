@@ -82,6 +82,7 @@
     opacity: 0.75;
     margin-top: 0px;
     margin-bottom: 20px;
+    max-width: 360px;
 }
 
 .productHighlights_product-one-btn  {
@@ -135,6 +136,12 @@
 
 .productHighlights_product-three-img {
     border-radius: 8px;
+    background-image: url("/assets/home/mobile/image-earphones-yx1.jpg");
+    height: 210px;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .productHighlights_product-three-text-container {
@@ -148,4 +155,47 @@
     justify-content: center;
     padding: 20px;
     margin-top: 25px;
+}
+
+
+/* //////////////// media query ////////////////// */
+
+@media screen and (min-width: 750px) {
+
+    .productHighlights_product-one-title {
+        font-size: 3.5rem;
+        line-height: 3.625rem; /* 103.571% */
+        margin-bottom: 15px;
+        margin-top: 55px;
+    }
+
+    .productHighlights_product-one {
+        height: 700px;
+    }
+
+    .productHighlights_product-two {
+        padding: 60px;
+        background-image: url("/assets/home/tablet/image-speaker-zx7.jpg");
+    }
+
+    .productHighlights_product-three {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .productHighlights_product-three-img {
+        width: 50%;
+        height: 320px;
+        background-image: url("/assets/home/tablet/image-earphones-yx1.jpg");
+    }
+
+    .productHighlights_product-three-text-container {
+        height: 320px;
+        padding: 30px;
+        margin: 0px;
+        width: 50%;
+    }
 }
