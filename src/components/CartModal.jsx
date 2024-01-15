@@ -9,6 +9,7 @@ function CartModal(props) {
     const {shoppingCart, setShoppingCart} = useContext(ShoppingCartContext)
     let shoppingCartItemElements = []
 
+    /// function that finds the correct item in the shopping cart and changes the product count accordingly
     function changeCount(event, plusOrMinus) {
         const productElementId = parseInt(event.target.parentNode.parentNode.getAttribute('cartid'))
         setShoppingCart(prevState => {
@@ -40,6 +41,7 @@ function CartModal(props) {
         })
     }
 
+    //// renders each product in the shopping cart by grabbing the data from the shopping cart
     function renderShoppingCartItems() {
         for (let i = 0; i < shoppingCart.length; i++) {
             shoppingCartItemElements.push(
@@ -65,6 +67,7 @@ function CartModal(props) {
         return shoppingCartItemElements
     }
 
+    //// checks on every render if a product has a count of zero, if it does it is removed from the shopping cart
     function checkForZeroProductCount() {
         for (let i = 0; i < shoppingCart.length; i++) {
             if (shoppingCart[i].count === 0) {
@@ -83,12 +86,15 @@ function CartModal(props) {
                 <h1 className="cartModal_item-count">Cart ({shoppingCart.length})</h1>
                 <p onClick={() => setShoppingCart([])} className="cartModal_remove-all-text"> Remove all</p>
             </div>
+
             {renderShoppingCartItems()}
 
             <div className="cartModal_total-container">
                 <p className="cartModal_total-title">Total</p>
                 <p className="cartModal_total-value">{utils.formatCurrency(utils.calculateTotals(shoppingCart).total)}</p>
             </div>
+            
+            {/* shows or hides checkout btn depending on if there are any items in the cart */}
             {
                 shoppingCart.length > 0 ?
                     <Link onClick={() => props.setShoppingCartOpen(false)} to="/Checkout"><button className="shared-btn-style-orange cartModal_btn"> checkout</button></Link>

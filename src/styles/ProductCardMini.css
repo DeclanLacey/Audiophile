@@ -20,9 +20,7 @@
 }
 
 .productCardMini_name {
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     letter-spacing: 1.714px;
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -34,7 +32,6 @@
 }
 
 .productCardMini_card-title {
-    font-style: normal;
     font-weight: 700;
     line-height: 2.25rem; /* 150% */
     letter-spacing: 0.05356rem;

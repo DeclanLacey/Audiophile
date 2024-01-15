@@ -8,11 +8,13 @@ import "../styles/Homepage.css"
 
 function Homepage() {
 
+    /// scrolls to the top of the window when the page renders
     useEffect(() => {
         window.scrollTo(0, 0)
-      }, [])
+    }, [])
 
-      function provideProductInfo(givenName) {
+    //// returns data for an item when given a name by searching the JSON data
+    function provideProductInfo(givenName) {
         let productData
         for (let i = 0; i < data.length; i++) {
             if (data[i].name === givenName) {
@@ -21,7 +23,6 @@ function Homepage() {
         }
         return productData
     }
-
 
     return (
         <div>

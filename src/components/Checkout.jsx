@@ -7,11 +7,17 @@ import "../styles/Checkout.css"
 
 function Checkout() {
 
-    const {shoppingCart, setShoppingCart} = useContext(ShoppingCartContext)
+    const {shoppingCart} = useContext(ShoppingCartContext)
+    
+    /// state that decides what kind of payment the user has chosen, set automaticlly to e-money
     const [paymentType, setPaymentType] = useState("e-money")
+
+    /// state that is set to true when the cart is submitted
     const [cartSubmitted, setCartSubmitted] = useState(false)
     const navigate = useNavigate()
 
+
+    /// function that adds dashes when a phone number is input by the user
     function addDashesToPhoneNumber(event) {
         if (event.key != 'Backspace' && (event.target.value.length === 3 || event.target.value.length === 7)){
             event.target.value += '-';

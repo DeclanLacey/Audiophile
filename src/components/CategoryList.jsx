@@ -3,10 +3,16 @@ import "../styles/CategoryList.css"
 
 function CategoryList(props) {
 
+    /// array of the current category names
     const categoryNames = ["headphones", "speakers", "earphones"]
+
+    /// arrray of the current category photos
     const categoryPhotoLinks = ["/assets/shared/desktop/image-category-thumbnail-headphones.png","/assets/shared/desktop/image-category-thumbnail-speakers.png","/assets/shared/desktop/image-category-thumbnail-earphones.png"]
+    //// these were both needed to allow the links to the categories to work
+    
     let categoryListElements = []
 
+    ///// renders the each category currently in the category names list
     function renderCategoryListElements() {
         for(let i = 0; i < categoryNames.length; i++) {
             categoryListElements.push(

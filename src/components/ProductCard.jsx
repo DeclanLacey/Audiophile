@@ -7,13 +7,18 @@ function ProductCard(props) {
     let flexOrderImage
     let flexOrderText
 
-    if ((props.itemNum % 2) === 1) {
-        flexOrderImage = 1
-        flexOrderText = 2
-    }else {
-        flexOrderImage = 2
-        flexOrderText = 1
+    /// this allows the flex order of the product cards to be alternated (css)
+    function decideFlexOrder() {
+        if ((props.itemNum % 2) === 1) {
+            flexOrderImage = 1
+            flexOrderText = 2
+        }else {
+            flexOrderImage = 2
+            flexOrderText = 1
+        }
     }
+    
+    decideFlexOrder()
 
     return (
         <section className="productCard">

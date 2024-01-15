@@ -8,29 +8,29 @@ import ProductCardMini from "./ProductCardMini"
 import "../styles/ProductDetail.css"
 
 function ProductDetail() {
-
-    const [productCount, setProductCount] = useState(1)
-    const {shoppingCart, setShoppingCart} = useContext(ShoppingCartContext)
-
-
-
-    const location = useLocation()
-    const data = location.state
-    const navigate = useNavigate()
-    
-    const shortProductName = data.name.substring(0, data.name.lastIndexOf(" "))
-    const featureTextFirstHalf = data.features.match(/^(.*)(.{3})/).slice(1).join('')
-    const featureTextSecondHalf = data.features.replace(featureTextFirstHalf, "")
-    let price = utils.formatCurrency(data.price)
-
-    useEffect(() => {
-        setProductCount(1)
-
-    }, [data])
-
     useEffect(() => {
         window.scrollTo(0, 0)
     })
+
+    const [productCount, setProductCount] = useState(1)
+    const {shoppingCart, setShoppingCart} = useContext(ShoppingCartContext)
+    const navigate = useNavigate()
+
+    /// grabs data passed through the link
+    const location = useLocation()
+    const data = location.state
+    
+    const shortProductName = data.name.substring(0, data.name.lastIndexOf(" "))
+    /// splits the "feature" text into two halves and stores them in 2 variables
+    const featureTextFirstHalf = data.features.match(/^(.*)(.{3})/).slice(1).join('')
+    const featureTextSecondHalf = data.features.replace(featureTextFirstHalf, "")
+
+    let price = utils.formatCurrency(data.price)
+
+    ////resets product count when the user switches to a different product
+    useEffect(() => {
+        setProductCount(1)
+    }, [data])
 
     function increaseProductCount() {
         setProductCount(prevState => prevState + 1)
@@ -42,10 +42,11 @@ function ProductDetail() {
         }
     }
 
+    //// adds items to the cart and calls the checkForItemInCart function to find out whether or not the item alreay exists
+    //// if it does it will update that item rather than creating a new item
     function handleAddToCart() {
         
         if (checkForItemInCart().itemFound) {
-
             let newCount = productCount + checkForItemInCart().previousCount
 
             setShoppingCart(prevState => prevState.filter((_, i) => i === checkForItemInCart.itemIndex))
@@ -82,6 +83,7 @@ function ProductDetail() {
         }
     }
 
+    //// checks the current shopping cart to see if the current item already is there or not
     function checkForItemInCart() {
         let itemFound = false
         let itemIndex
@@ -147,7 +149,6 @@ function ProductDetail() {
                     </div>
                 </div>
             </div>
-            
 
             <div className="productDetail_extra-img-container">
                 <div className="productDetail_extra-img-inner-container">

@@ -8,17 +8,20 @@ import {Routes, Route} from "react-router-dom"
 import { createContext, useEffect, useState } from "react"
 import "../styles/App.css"
 
+/// creating context that holds shopping cart data
 const ShoppingCartContext = createContext()
 export {ShoppingCartContext}
 
 export default function App() {
 
+  //// setting shopping cart to either local storage or if none then an empty array
   const [shoppingCart, setShoppingCart] = useState(() => {
     const savedData = localStorage.getItem("shoppingcart")
     const intialValue = JSON.parse(savedData)
     return intialValue || []
   })
   
+  /// updating local storage
   useEffect(() => {
     localStorage.setItem("shoppingcart", JSON.stringify(shoppingCart))
   }, [shoppingCart])

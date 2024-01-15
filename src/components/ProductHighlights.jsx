@@ -4,6 +4,7 @@ import "../styles/ProductHighlights.css"
 
 function ProductHighlights() {
 
+    //// returns the data for a product matching the given name
     function provideProductInfo(givenName) {
         let productData
         for (let i = 0; i < data.length; i++) {

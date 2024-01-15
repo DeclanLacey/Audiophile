@@ -16,7 +16,6 @@
 
 .cartModal_remove-all-text {
     font-size: 0.9375rem;
-    font-style: normal;
     font-weight: 500;
     line-height: 1.5625rem; /* 166.667% */
     text-decoration-line: underline;
@@ -26,9 +25,7 @@
 
 .cartModal_item-count {
     font-size: 1.125rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     letter-spacing: 0.08038rem;
     text-transform: uppercase;
 }
@@ -70,7 +67,6 @@
 
 .cartModal_name {
     margin: 0px;
-    font-style: normal;
     font-weight: 700;
     line-height: 25px;
     font-size: 0.8375rem;
@@ -78,7 +74,6 @@
 
 .cartModal_price {
     margin: 0px;
-    font-style: normal;
     font-weight: 700;
     line-height: 25px;
     opacity: 0.5;
@@ -99,7 +94,6 @@
 
 .cartModal_total-title {
     font-size: 0.9375rem;
-    font-style: normal;
     font-weight: 500;
     line-height: 1.5625rem;
     opacity: 0.5;
@@ -107,9 +101,7 @@
 
 .cartModal_total-value {
     font-size: 1.125rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     text-transform: uppercase;
 }
 
@@ -143,9 +135,7 @@
 }
 
 .cartModal_product-count {
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     letter-spacing: 0.0625rem;
     text-transform: uppercase;
     font-size: 0.8125rem;

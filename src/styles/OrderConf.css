@@ -30,7 +30,6 @@
 
 .orderConf_title {
     font-size: 1.5rem;
-    font-style: normal;
     font-weight: 700;
     line-height: 1.75rem; /* 116.667% */
     letter-spacing: 0.05356rem;
@@ -39,7 +38,6 @@
 
 .orderConf_email-text {
     font-size: 0.9375rem;
-    font-style: normal;
     font-weight: 500;
     line-height: 1.5625rem;
     opacity: 0.5;
@@ -60,7 +58,6 @@
 
 .orderConf_product-name {
     font-size: 0.9375rem;
-    font-style: normal;
     font-weight: 700;
     line-height: 1.5625rem; 
     margin: 0px;
@@ -68,7 +65,6 @@
 
 .orderConf_product-price {
     font-size: 0.875rem;
-    font-style: normal;
     font-weight: 700;
     line-height: 1.5625rem;
     opacity: 0.5;
@@ -79,7 +75,6 @@
     margin: 0px;
     margin-top: 5px;
     font-size: 0.9375rem;
-    font-style: normal;
     font-weight: 700;
     line-height: 1.5625rem;
     opacity: 0.5;
@@ -100,9 +95,7 @@
     padding: 15px;
     padding-bottom: 25px;
     font-size: 0.75rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     letter-spacing: -0.01338rem;
     opacity: 0.5;
 }
@@ -126,7 +119,6 @@
 .orderConf_grand-total-text {
     margin: 0px;
     font-size: 0.9375rem;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.5625rem;
     opacity: .5;
@@ -137,9 +129,7 @@
 .orderConf_grand-total-value {
     margin: 0px;
     font-size: 1.125rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     text-transform: uppercase;
 }
 

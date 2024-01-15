@@ -5,6 +5,7 @@ import "../styles/ProductCardMini.css"
 function ProductCardMini(props) {
     const data = props.data
 
+    //// finds data of the "other items" in the JSON data given a name
     function findOtherItemData(shortName) {
         let foundData
         for(let i = 0; i < fullData.length; i++) {

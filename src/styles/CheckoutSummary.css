@@ -12,9 +12,7 @@
 
 .checkoutSummary_title {
     font-size: 1.125rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     letter-spacing: 0.08038rem;
     text-transform: uppercase;
     margin-top: 10px;
@@ -45,7 +43,6 @@
     max-width: 100px;
     margin: 0px;
     font-size: 0.9375rem;
-    font-style: normal;
     font-weight: 700;
     line-height: 1.5625rem;
 }
@@ -53,7 +50,6 @@
 .checkoutSummary_price {
     margin: 0px;
     font-size: 0.875rem;
-    font-style: normal;
     font-weight: 700;
     line-height: 1.5625rem;
     opacity: 0.5;
@@ -63,7 +59,6 @@
     margin: 0px;
     margin-top: 10px;
     font-size: 0.9375rem;
-    font-style: normal;
     font-weight: 700;
     line-height: 1.5625rem;
     opacity: 0.5;
@@ -80,7 +75,6 @@
 
 .checkoutSummary_breakdown-line-title {
     font-size: 0.9375rem;
-    font-style: normal;
     font-weight: 500;
     line-height: 1.5625rem;
     opacity: 0.5;
@@ -89,9 +83,7 @@
 
 .checkoutSummary_breakdown-line-value {
     font-size: 1.125rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     text-transform: uppercase;
 }
 

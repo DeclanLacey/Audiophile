@@ -10,14 +10,17 @@ function Header() {
     const [shoppingCartOpen, setShoppingCartOpen] = useState(false)
     const {shoppingCart} = useContext(ShoppingCartContext)
 
+    /// opens and closes the burger menu
     function handleBurgerMenuClick() {
         setBurgerMenuOpen(prevState => !prevState)
     }
 
+    /// open and closes the shopping cart
     function handleShoppingCartClick() {
         setShoppingCartOpen(prevState => !prevState)
     }
 
+    //// returns the total number of items
     function calculateTotalItems() {
         let totalCount = 0
         for(let i = 0; i < shoppingCart.length; i++) {

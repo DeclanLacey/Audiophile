@@ -27,7 +27,6 @@
 }
 
 .footer_nav-link {
-    font-style: normal;
     font-weight: 700;
     line-height: 25px; 
     letter-spacing: 2px;
@@ -47,7 +46,6 @@
 .footer_company-desc {
     color: white;
     opacity: 0.5;
-    font-style: normal;
     font-weight: 400;
     line-height: 25px;
     text-align: center;
@@ -65,7 +63,6 @@
 .footer_copyright-text {
     font-size: 0.9375rem;
     color: white;
-    font-style: normal;
     font-weight: 600;
     line-height: 1.5625rem;
     opacity: 0.5;
