@@ -193,6 +193,12 @@
 }
 
 @media screen and (min-width: 1250px) {
+
+    .productHighlights_container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
     .productHighlights_product-one {
         display: flex;
         flex-direction: row;

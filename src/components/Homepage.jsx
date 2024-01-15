@@ -38,7 +38,9 @@ function Homepage() {
                 </div>
             </section>
             
-            <CategoryList />
+            <div className="homepage_category-list-container">
+                <CategoryList />
+            </div>
             <ProductHighlights />
             <CompanyAbout />
         </div>

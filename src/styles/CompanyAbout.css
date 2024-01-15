@@ -65,16 +65,20 @@
 @media screen and (min-width: 1250px) {
     .companyAbout_img {
         background-image: url("/assets/shared/desktop/image-best-gear.jpg");
-        width: 50%;
+        width: 40%;
         height: 530px;
         order: 2;
         border-radius: 8px;
+        background-size: cover;
+    
     }
 
     .companyAbout_container {
+        width: 80%;
         display: flex;
         gap: 80px;
         align-items: center;
+        justify-content: space-between;
     }
 
     .companyAbout_title {

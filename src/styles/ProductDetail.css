@@ -243,5 +243,21 @@
         justify-content: flex-start;
         margin-left: 180px;
     }
+
+    .productDetail_extra-img-container {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .productDetail_extra-img-inner-container img {
+        max-height: 280px;
+        max-width: 600px;
+    }
+
+    .productDetail_extra-img-right {
+        max-height: 585px;
+        max-width: 600px;
+    }
     
 }

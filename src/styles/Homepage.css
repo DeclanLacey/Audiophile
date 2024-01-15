@@ -92,4 +92,9 @@
         margin: 0;
         margin-bottom: 20px;
     }
+
+    .homepage_category-list-container {
+        width: 72%;
+        margin: 0 auto;
+    }
 }
