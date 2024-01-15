@@ -103,6 +103,37 @@
     opacity: .4;
 }
 
+.header_nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.header_nav-link {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 0.8125rem;
+    cursor: pointer;
+    transition: color 700ms;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.header_nav-link:hover {
+    color: #D87D4A;
+}
+
 
 @media screen and (min-width: 750px) {
     .header_shopping-cart-content {
@@ -114,5 +145,35 @@
 
     .header_burger-logo-container {
         justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .burger-menu {
+        display: none;
+    }
+
+    .header-container {
+       text-align: center;
+       width: 100%;
+       border: 1px solid red;
+    }
+
+    .shopping-cart-icon {
+        margin-right: 50px;
+    }
+
+    .header_cart-num {
+        right: 70px;
+    }
+
+    .header_logo {
+        margin-left: 70px;
+    }
+
+    .header_nav-container {
+        display: inherit;
+        width: fit-content;
+        margin: 0 auto;
     }
 }

@@ -133,18 +133,21 @@ function ProductDetail() {
                 </div>
             </div>
             
-            <div className="productDetail_features-container">
-                <h2 className="productDetail_features-title"> Features </h2>
-                <p className="productDetail_features-text"> {featureTextFirstHalf}</p>
-                <p className="productDetail_features-text">{featureTextSecondHalf}</p>
-            </div>
+            <div className="productDetail_features-in-box-container">
+                <div className="productDetail_features-container">
+                    <h2 className="productDetail_features-title"> Features </h2>
+                    <p className="productDetail_features-text"> {featureTextFirstHalf}</p>
+                    <p className="productDetail_features-text">{featureTextSecondHalf}</p>
+                </div>
 
-            <div className="productDetail_in-the-box-container">
-                <h2 className="productDetail_in-box-title">in the box</h2>
-                <div className="productDetail_in-box-outer-container">
-                    {renderInTheBoxElements()}
+                <div className="productDetail_in-the-box-container">
+                    <h2 className="productDetail_in-box-title">in the box</h2>
+                    <div className="productDetail_in-box-outer-container">
+                        {renderInTheBoxElements()}
+                    </div>
                 </div>
             </div>
+            
 
             <div className="productDetail_extra-img-container">
                 <div className="productDetail_extra-img-inner-container">

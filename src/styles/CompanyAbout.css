@@ -64,3 +64,28 @@
         margin-bottom: -140px;
     }
 }
+
+@media screen and (min-width: 1250px) {
+    .companyAbout_img {
+        background-image: url("/assets/shared/desktop/image-best-gear.jpg");
+        width: 50%;
+        height: 530px;
+        order: 2;
+        border-radius: 8px;
+    }
+
+    .companyAbout_container {
+        display: flex;
+        gap: 80px;
+        align-items: center;
+    }
+
+    .companyAbout_title {
+        text-align: left;
+    }
+
+    .companyAbout_desc {
+        text-align: left;
+    }
+    
+}

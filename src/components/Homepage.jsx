@@ -36,6 +36,7 @@ function Homepage() {
                     </Link>
                 </div>
             </section>
+            
             <CategoryList />
             <ProductHighlights />
             <CompanyAbout />

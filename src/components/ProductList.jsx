@@ -12,6 +12,7 @@ function ProductList() {
     const location = useLocation()
     const category = location.state.category
     let productElements = []
+    let count = 0
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -29,7 +30,8 @@ function ProductList() {
     }, [category])
 
     for (let i = categoryProducts.length - 1; i >= 0; i--) {
-        productElements.push(<ProductCard key={categoryProducts[i].id} data={categoryProducts[i]} />)
+        count++
+        productElements.push(<ProductCard key={categoryProducts[i].id} itemNum={count} data={categoryProducts[i]} />)
     }
 
     return (

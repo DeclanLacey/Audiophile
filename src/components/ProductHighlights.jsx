@@ -18,11 +18,14 @@ function ProductHighlights() {
         <section className="productHighlights_container">
 
             <div className="productHighlights_product-one">
-                <img className="productHighlights_product-one-img" src="/assets/home/mobile/image-speaker-zx9.png"/>
-                <h2 className="productHighlights_product-one-title"> zx9 <br></br> speaker </h2>
-                <p className="productHighlights_product-one-desc"> Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound. </p>
-                <Link to="/ProductList/ProductDetail" state={provideProductInfo("ZX9 Speaker")}> <button className="productHighlights_product-one-btn"> see product </button>  </Link>
+                <img className="productHighlights_product-one-img" src="/assets/home/desktop/image-speaker-zx9.png"/>
+                <div className="productHighlights_product-one-text-container">
+                    <h2 className="productHighlights_product-one-title"> zx9 <br></br> speaker </h2>
+                    <p className="productHighlights_product-one-desc"> Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound. </p>
+                    <Link to="/ProductList/ProductDetail" state={provideProductInfo("ZX9 Speaker")}> <button className="productHighlights_product-one-btn"> see product </button>  </Link>
+                </div>
             </div>
+            <div className="productHighlights_image-cover"></div>
 
             <div className="productHighlights_product-two">
                 <h1 className="productHighlights_product-two-title"> zx7 speaker</h1>

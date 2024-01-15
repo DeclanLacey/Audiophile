@@ -207,3 +207,21 @@ input[type='radio'] {
         justify-content: space-between;
     }
 }
+
+@media screen and (min-width: 1250px) {
+    .checkout_form {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        gap: 50px;
+        align-items: flex-start;
+    }
+
+    .checkout_form-container {
+        width: 70%;
+    }
+
+    .checkout_go-back-text {
+        width: 80%;
+    }
+}

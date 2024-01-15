@@ -132,6 +132,14 @@
     opacity: 0.5;
     cursor: pointer;
     font-size: 0.8125rem;
+    transition-property: color, opacity;
+    transition-duration: 400ms;
+}
+
+.cartModal_minus:hover,
+.cartModal_plus:hover {
+    color: #D87D4A;
+    opacity: 1;
 }
 
 .cartModal_product-count {

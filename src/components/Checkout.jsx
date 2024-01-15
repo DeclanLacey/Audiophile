@@ -38,7 +38,8 @@ function Checkout() {
                     <></>
             }
             <p onClick={() => navigate(-1)} className="checkout_go-back-text">Go Back</p>
-            <form onSubmit={handleSubmit} >
+           
+            <form className="checkout_form" onSubmit={handleSubmit} >
                 <section className="checkout_form-container">
                     <h1 className="checkout_title">Checkout</h1>
                     
@@ -114,7 +115,7 @@ function Checkout() {
                             </div>
                             :
                             <div className="checkout_cash-option-container">
-                                <img className="checkout_cash-img" src="public\assets\checkout\icon-cash-on-delivery.svg" />
+                                <img className="checkout_cash-img" src="\assets\checkout\icon-cash-on-delivery.svg" />
                                 <p className="checkout_cash-text"> The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
                             </div>
                         }
